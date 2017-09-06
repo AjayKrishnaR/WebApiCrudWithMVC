@@ -20,6 +20,10 @@ namespace WebApiCRUDOperations
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //To Restrict JSON Result    
+
+            config.Formatters.Remove(config.Formatters.JsonFormatter);
         }
     }
 }
